@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="unselected_tab_color">#cccccc</color>
+    <color name="selected_tab_color">#000000</color>
+    <color name="primary">#33F1CCCD</color>
+    <color name="custom_action_bar_color">#33F1CCCD</color>
+    <color name="good">#4CAF50</color> <!-- Xanh lá -->
+    <color name="moderate">#FFEB3B</color> <!-- Vàng -->
+    <color name="unhealthy_sensitive">#FF9800</color> <!-- Cam nhạt -->
+    <color name="unhealthy">#F44336</color> <!-- Đỏ cam -->
+    <color name="very_unhealthy">#9C27B0</color> <!-- Tím đậm -->
+    <color name="hazardous">#B71C1C</color> <!-- Đỏ rất đậm -->
+    <color name="gray">#9E9E9E</color> <!-- Xám -->
+
+</resources>

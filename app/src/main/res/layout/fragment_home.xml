@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nen"
+    tools:context=".Fragments.HomeFragment">
+
+    <!-- Khung chính -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="373dp"
+        android:layout_height="685dp"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Hình ảnh thời tiết -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/conditionView"
+            android:layout_width="364dp"
+            android:layout_height="237dp"
+            android:scaleType="fitXY"
+            android:elevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/roundImageView" />
+
+        <!-- Thành phố -->
+        <TextView
+            android:id="@+id/cityTxt"
+            android:layout_width="336dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:elevation="4dp"
+            android:text="city"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="@id/conditionView"
+            app:layout_constraintTop_toTopOf="@id/conditionView" />
+
+        <!-- Nhiệt độ chính -->
+        <TextView
+            android:id="@+id/mainTempTxt"
+            android:layout_width="199dp"
+            android:layout_height="99dp"
+            android:layout_marginStart="25dp"
+            android:text="23"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cityTxt" />
+
+        <!-- Trạng thái thời tiết -->
+
+        <!-- "Chi tiết thời tiết" -->
+
+        <!-- Thẻ cảm nhận nhiệt độ -->
+
+        <!-- Thẻ tốc độ gió -->
+        <TextView
+            android:id="@+id/conditionTxt"
+            android:layout_width="234dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp"
+            android:text="Nắng"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.294"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainTempTxt" />
+
+        <TextView
+            android:id="@+id/detailTv"
+            android:layout_width="143dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Chi tiết hôm nay"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conditionView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="76dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conditionView">
+
+            <View
+                android:id="@+id/tempFrame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/rectangle"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/temp_icon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:elevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/temperature_icon" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Cảm nhận"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/temp_icon" />
+
+            <TextView
+                android:id="@+id/realFeelTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="8dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="25C"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Thẻ độ ẩm -->
+
+        <!-- Thẻ mây -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="52dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout">
+
+            <View
+                android:id="@+id/windFrame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/rectangle"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/wind_icon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:elevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/wind_icon" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Tốc độ gió"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wind_icon" />
+
+            <TextView
+                android:id="@+id/windSpeedTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="6 km/h"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="76dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conditionView">
+
+            <View
+                android:id="@+id/humidityFrame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/rectangle"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/humidity_icon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:elevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/humidity_icon" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Độ ẩm"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/humidity_icon" />
+
+            <TextView
+                android:id="@+id/humidityTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="12dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="65%"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <View
+                android:id="@+id/cloudFrame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="13dp"
+                android:background="@drawable/rectangle"
+                android:elevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/cloud_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="12dp"
+                android:elevation="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cloud_icon" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Mây"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cloud_icon" />
+
+            <TextView
+                android:id="@+id/cloudTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="55%"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

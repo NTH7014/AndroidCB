@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_layout"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:background="@drawable/clear_mainframe"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/widget_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City Name"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/widget_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:contentDescription="Weather Icon" />
+
+    <TextView
+        android:id="@+id/widget_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--°C"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
